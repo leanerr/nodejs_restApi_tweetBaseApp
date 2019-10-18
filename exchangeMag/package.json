@@ -1,0 +1,49 @@
+{
+  "name": "nodejs-cms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start:prod": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "auto-bind": "^1.2.0",
+    "bcrypt": "^3.0.6",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^5.0.1",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "express-ejs-layouts": "^2.4.0",
+    "express-recaptcha": "^4.0.2",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.1",
+    "method-override": "^3.0.0",
+    "mkdirp": "^0.5.1",
+    "moment-jalaali": "^0.8.3",
+    "mongoose": "^5.0.16",
+    "mongoose-paginate": "^5.0.3",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "rss": "^1.2.2",
+    "sharp": "^0.22.1",
+    "sitemap": "^3.2.2",
+    "striptags": "^3.1.1",
+    "unique-string": "^1.0.0",
+    "validator": "^11.1.0",
+    "vcap_services": "^0.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

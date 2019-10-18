@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%- defineContent('title') || 'مجله '  %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="اپلیکیشن و مجله ورزشی فیتکس تمامی نیاز های علمی و تخصصی شما در مورد ورزش , سلامت و تغذیه را پشتیبانی میکند. ">
+    <meta name="keywords" content="اپلیکیشن فیتکس , فیتکس , مجله فیتکس , وبسایت فیتکس , فیتنس, تمرین در منزل, مقالات ورزشی ,سلامت ,تغذیه, ورزش بانوان  ,دختران ورزشکار, پسران ورزشکار, تمرین بدون نیاز به تجهیزات , باشگاه ورزشی, تناسب اندام ,زیبایی ظاهری , برنامه های تمرینی, بدنسازی ,باشگاه ورزشی , تیم فیتکس   ">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap-rtl.min.css" />
+    <link rel="stylesheet" href="/css/vazir.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" media="screen" href="../../../public/css/particles.js-master.css">
+
+
+    <%- style %>
+</head>
+<body>
+
+
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand  p-2"  href="/" style="background: #009688">مجله بیت اسپایدر</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+              <ul class="navbar-nav ml-auto">
+                <!--<li class="nav-item font-weight-bold pr-2" >-->
+                  <!--<a class="nav-link  text-light" href="/">صفحه اصلی</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                  <!--<a class="nav-link" href="/courses">دوره ها</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item  mr-2">-->
+                  <!--<a class="nav-link text-light font-weight-normal" href="/about-us">درباره ما</a>-->
+                <!--</li>-->
+
+                 <li class="nav-item  mr-2">
+                  <a class="nav-link text-light font-weight-normal" href="/posts">همه مطالب</a>
+                </li>
+
+              </ul>
+              <ul class="nav navbar-nav navbar-right ">
+                  </li>
+                  <li class="">
+                  <!--<li><a class="btn btn-outline-info btn-sm p-2 mt-2 ml-2" href="/land">معرفی اپلیکیشن</a></li>-->
+                  <!--</li>-->
+                    <% if(auth.check) { %>
+                      <li><a class="btn btn-primary btn-sm ml-2 " href="/admin">پنل کاربری</a></li>
+                      <li><a class="btn btn-outline-danger btn-sm" href="/logout">خروج</a></li>
+                    <% } else { %>
+                  <a class="navbar" href="https:/">
+
+                      <!--<img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">-->
+                      <img src="http://localhost:3001/undraw_bitcoin2_ave7 (1).svg" width="110" height="40" class="d-inline-block align-top" alt="">
+
+                  </a>
+                      <!--<li><a class="btn btn-success btn-sm ml-2" href="/auth/login">ورود</a></li>-->
+                      <!--<li><a class="btn btn-primary btn-sm" href="/auth/register">عضویت</a></li>       -->
+                    <% } %>
+              </ul>
+            </div>
+        </div>
+
+      </nav>
+
+
+
+    <div class="container mt-2 ">
+
+      <%- body %>
+
+    </div>
+    <div class="Footer  bg-dark text-white">
+        <!-- Footer -->
+        <footer class="page-footer font-small teal pt-4 ">
+
+            <nav class="nav nav-pils justify-content-center">
+                <a class="nav-item nav-link " href="https://www.instagram.com//"><img class="imgSocial" src="http://localhost:3001/185985.svg" alt=""></a>
+                <a class="nav-item nav-link " href="#"><img class="imgSocial" src="http://localhost:3001/aparat.png" alt=""></a>
+                <a class="nav-item nav-link" href="#"><img class="imgSocial" src="http://localhost:3001/145812.svg" alt=""></a>
+            </nav>
+            <!-- Copyright -->
+
+            <div class="text-center">تمامی حقوق متعلق به بیت اسپایدر میباشد , انتشار مطالب با ذکر منبع بلا مانع است</div>
+            <div class="footer-copyright text-center py-3">© 2019 Copyright:
+                <a class="bg-danger text-white" href="https://fitexapp.ir"> BitSpider.ir</a>
+
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    </div>
+
+
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145305000-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-145305000-1');
+    </script>
+
+
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+     <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
+
+
+    <%- script %>
+</body>
+</html>

@@ -1,0 +1,170 @@
+body {
+    font-family: 'Vazir' , Vazir , Tahoma , Arial ,sans-serif !important;
+    font-size: .875rem;
+    font-weight: 300;
+}
+p {
+    font-size: medium;
+}
+.card-body p{
+    font-size: small;
+}
+.Footer{
+    background: linear-gradient(to right, #001e32, #001425);
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin-top: 10%;
+}
+.cardHeight {
+    height: 168px !important;
+}
+.headHeight {
+    height: 40% !important;
+}
+.backgroundColor {
+    background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+}
+
+.margbottom {
+    margin: 2% !important;
+    /*padding: 2% !important;*/
+}
+.imgSocial {
+    width: 40px;
+    height: 40px;
+}
+live
+.view {
+    background: url("http://localhost:3001/undraw_connected_world_wuay.png")no-repeat center center;
+    background-size: cover;
+
+}
+@media (min-width: 768px) {
+    .view {
+        overflow: visible;
+
+    }
+}
+.navbar {
+    z-index: 1;
+}
+
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+.height {
+    padding: 5%;
+}
+
+/* end*/
+.singleImageSize {
+    width: 60%;
+}
+
+.text-decoration-none {
+    text-decoration: none !important;
+}
+.heightCart {
+    height : 455px ;
+}
+.heightHeadCart {
+    height : 50% ;
+}
+
+/*search box css start here*/
+.search-sec{
+    background: #dfdeda;padding: 2rem;
+}
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+
+#text2,
+#myButton {
+    display: none;
+}
+
+
+
+/*particles*/
+.test{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    /* background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.7))), url(http://alphateach.ir/images/body.jpg) repeat 0 0; */
+    /* background-size: cover; */
+}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 80vh !important;
+}
+.test div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.test ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+}
+.test ul li{
+    list-style-type: none;
+    padding: 10px 20px;
+    border: 2px solid rgba(255,255,255,.7);
+    margin: 0px 15px;
+    border-radius: 3px;
+    background-color:rgba(255,255,255,.3)
+}
+.test ul li a{
+    color: white;
+}
+.test-title{
+    font-size: 3em;
+    padding-top: 70px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 600;
+}
+.test-description{
+    font-size: 1.6em;
+    padding: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    line-height: 35px;
+
+
+}
+.show-xs{
+    display: none;
+}
+/*particlesEnd*/
