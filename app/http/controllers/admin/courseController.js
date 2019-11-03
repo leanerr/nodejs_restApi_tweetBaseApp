@@ -10,7 +10,7 @@ class courseController extends controller {
         try {
             let page = req.query.page || 1;
             let courses = await Course.paginate({} , { page , sort : { createdAt : -1 } , limit : 6 });
-            res.render('admin/courses/index',  { title : 'مقاله ها' , courses });
+            res.render('admin/courses/index',  { title : 'پست ها' , courses });
         } catch (err) {
             next(err);
         }
@@ -34,9 +34,11 @@ class courseController extends controller {
             }
 
             // create course
-            let images = this.imageResize(req.file);
-            let time = new Date().getTime();
-            let { title , body , type , price , tags , sum , author , timeline } = req.body;
+
+                // let images = req.file ;
+
+            let timestamp = new Date().getTime();
+            let { image ,title , body   , author  } = req.body;
 
             let newCourse = new Course({
                 user : req.user._id,
@@ -44,14 +46,8 @@ class courseController extends controller {
                 author,
                 slug : this.slug(title),
                 body,
-                type,
-                price,
-                time,
-                timeline,
-                images ,
-                thumb : images['small'],
-                tags ,
-                sum
+                timestamp,
+                // images
             });
 
             await newCourse.save();
@@ -67,7 +63,7 @@ class courseController extends controller {
             this.isMongoId(req.params.id);
 
             let course = await Course.findById(req.params.id);
-            if( ! course ) this.error('چنین دوره ای وجود ندارد' , 404);
+            if( ! course ) this.error('چنین پست ای وجود ندارد' , 404);
 
             let categories = await Category.find({}) ;
             return res.render('admin/courses/edit' , { course , categories });
@@ -88,11 +84,10 @@ class courseController extends controller {
             let objForUpdate = {};
 
             // set image thumb
-            objForUpdate.thumb = req.body.imagesThumb;
-
+            // objForUpdate.thumb = req.body.imagesThumb;
             // check image
             if(req.file) {
-                objForUpdate.images = this.imageResize(req.file);
+                objForUpdate.images = req.file;
                 objForUpdate.thumb = objForUpdate.images['small'];
             }
 
@@ -116,7 +111,7 @@ class courseController extends controller {
             // delete episodes
 
             // delete Images
-            Object.values(course.images).forEach(image => fs.unlinkSync(`./public${image}`));
+            // Object.values(course.images).forEach(image => fs.unlinkSync(`./public${image}`));
 
             // delete courses
             course.remove();
@@ -127,28 +122,28 @@ class courseController extends controller {
         }
     }
 
-    imageResize(image) {
-        const imageInfo = path.parse(image.path);
-
-        let addresImages = {};
-        addresImages['original'] = this.getUrlImage(`${image.destination}/${image.filename}`);
-
-        const resize = size => {
-            let imageName = `${imageInfo.name}-${size}${imageInfo.ext}`;
-            
-            let name = size === 480 ? 'small' : 720 ? 'medium' : 1080 ? 'large' : 'undefined_size';
-
-            addresImages[name] = this.getUrlImage(`${image.destination}/${imageName}`);
-
-            sharp(image.path)
-                .resize(size , null)
-                .toFile(`${image.destination}/${imageName}`);
-        }
-
-        [1080 , 720 , 480].map(resize);
-
-        return addresImages;
-    }
+    // imageResize(image) {
+    //     const imageInfo = path.parse(image.path);
+    //
+    //     let addresImages = {};
+    //     addresImages['original'] = this.getUrlImage(`${image.destination}/${image.filename}`);
+    //
+    //     const resize = size => {
+    //         let imageName = `${imageInfo.name}-${size}${imageInfo.ext}`;
+    //
+    //         let name = size === 480 ? 'small' : 720 ? 'medium' : 1080 ? 'large' : 'undefined_size';
+    //
+    //         addresImages[name] = this.getUrlImage(`${image.destination}/${imageName}`);
+    //
+    //         sharp(image.path)
+    //             .resize(size , null)
+    //             .toFile(`${image.destination}/${imageName}`);
+    //     }
+    //
+    //     [1080 , 720 , 480].map(resize);
+    //
+    //     return addresImages;
+    // }
 
     getUrlImage(dir) {
         return dir.substring(8);

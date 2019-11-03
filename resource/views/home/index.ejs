@@ -1,49 +1,4 @@
-
 <!--second nav with category and search-->
-<nav class="navbar navbar-expand-md navbar-dark " >
-    <div class="container">
-        <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#dw" aria-controls="dw" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <li class="badge badge-danger p-2">دسته بندی ها</li>
-        <div class="collapse navbar-collapse p-1" id="dw">
-            <ul class="navbar-nav ml-auto">
-                <% categories.forEach(category => { %>
-                <li class="nav-item dropdown m-2 p-1 ">
-                    <a class="nav-link dropdown-toggle d-inline badge-dark text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <%= category.name%>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <% if(category.childs) { %>
-                        <ul class="p-1 badge-dark  ">
-                            <% category.childs.forEach(cate => { %>
-                            <li class="d-block m-1 d-flex justify-content-center">
-                                <a class="text-white text-decoration-none  font-weight-normal " href="/post?category=<%= cate.slug %>"><%= cate.name %></a>
-                            </li>
-                            <% }) %>
-                        </ul>
-                        <% } %>
-                    </div>
-                </li>
-                <% }) %>
-
-
-            </ul>
-            <ul class="nav navbar-nav navbar-right ">
-
-                <form class="form-inline my-2 my-lg-0 badge-dark badge p-1" action="/post" method="get" novalidate="novalidate">
-                    <input type="text" class="form-control mr-sm-2" name="search" placeholder="  جست و جو کنید ">
-
-                    <button type="submit" class="btn-dark btn "  >جست و جو</button>
-
-                </form>
-
-
-            </ul>
-        </div>
-    </div>
-
-</nav>
 
 
 
@@ -53,36 +8,16 @@
 
 <div>
 
-   <!--<div style="  overflow: hidden;-->
-    <!--display: flex;-->
-    <!--justify-content: center;-->
-    <!--height: ;">-->
-       <!--<div id="particles-js" style="background: linear-gradient(90deg, #003a59 0%, #7f1517 100%);" >-->
-       <!--</div>-->
-       <!--<div  class="jumbotron hero-spacer text-white  row   " style="background: linear-gradient(90deg, #003a59 0%, #7f1517 100%);" >-->
 
-           <!--<div  class="col-md-6 p-3 col-12" >-->
-               <!--<h3 class=" font-weight-bold "> مجله اقتصادی  <span class="badge-success p-1 " style="background: #009688">بیت اسپایدر</span>  با رویکرد ساده!</h3>-->
-               <!--<h5 class="pt-2 pb-2 "> به روز و کاربردی برای بهبود سبک زندگی مالی شما</h5>-->
-               <!--<h7 class="pt-2 "> مطالب مرتبط با فین تک , تکنولوژی , بلاک چین , فایننس , بیت کوین و ارز های دیجیتال و سرمایه گذاری را میتوانید بطور مرتب در مجله ما بخوانید...</h7>-->
-           <!--</div>-->
-
-           <!--<div class="col-md-6 text-left col-12">-->
-               <!--<img class="cardHeight" src="http://localhost:3001/undraw_connected_world_wuay.svg" alt="fitex">-->
-           <!--</div>-->
-       <!--</div>-->
-
-   <!--</div>-->
-
-    <div class="test ">
-        <div id="particles-js" style="background: linear-gradient(90deg, #003a59 0%, #7f1517 100%);"></div>
+    <div class="test pt-5 ">
+        <div id="particles-js" style="background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);"></div>
         <div class="p-5 ">
             <div  class="col-md-12 p-5 col-12 text-white " >
-                <h2 class=" font-weight-bold  p-3"> مجله اقتصادی  <span class="badge-success p-1 " style="background: #009688">بیت اسپایدر</span>  با رویکرد فین تک!</h2>
-                <h4 class="pt-2 pb-2 d-none d-sm-block "> به روز و کاربردی برای بهبود سبک زندگی مالی شما</h4>
-                <h6 class="pt-2 d-none d-sm-block "> مطالب مرتبط با فین تک , تکنولوژی , بلاک چین , فایننس , بیت کوین و ارز های دیجیتال و سرمایه گذاری را میتوانید بطور مرتب در مجله ما بخوانید...</h6>
+                <h2 class=" font-weight-bold  p-3"> اپلیکیشن  <span class="badge-success p-1 " style="background: #009688">بمب خنده</span>  با رویکردی جذاب!</h2>
+                <h4 class="pt-2 pb-2 d-none d-sm-block "> به روز و کاربردی برای بهبود وضعیت روحی شما</h4>
+                <h6 class="pt-2 d-none d-sm-block "> مطالب مرتبط باسرگرمی, جوک , لطیفه  را میتوانید بطور مرتب در اپلیکشین ما بخوانید...</h6>
                 <div class="col-md-12 col-12 p-2  ">
-                    <img class="cardHeight " src="http://localhost:3001/undraw_connected_world_wuay.svg" alt="fitex">
+                    <img class="cardHeight " src="http://localhost:3001/undraw_smiley_face_lmgm(1).svg" alt="fitex">
                 </div>
             </div>
 
@@ -101,33 +36,6 @@
 
 
 
-    <div class="row mt-5 " >
-        <div class="d-inline bg-dark text-white m-3 p-2 ">
-            <h3 > سر تیتر مجله</h3>
-        </div>
-    </div>
-    <!-- header big articles-->
-
-    <div  class="row  ">
-        <% headers.forEach(head => { %>
-        <div class="col-12 col-md-4  mb-3 ">
-            <a href="<%= head.path() %>"> <img class="card-img-top headHeight" src="<%= head.thumb %>" alt="<%= head.title%>"></a>
-        <div class="card-body shadow heightHeadCart">
-            <a href="<%= head.path() %>" class="text-decoration-none" ><h4 class="card-title text-dark "><%= head.title%></h4></a>
-          <div class="d-none d-sm-block"> <p class="card-text "><%- head.sum.substr(0 , 180)%>...</p></div>
-       <%/*%>     <a href="<%= head.path() %>" class="btn btn-primary">ادامه مطلب →</a><%*/%>
-
-        </div>
-        <div class="card-footer text-muted ">
-            <span class="badge-success p-1" style="background: #009688"> <%= date(head.createdAt).format('jD jMMMM jYYYY') %></span> - <span class="badge-secondary p-1"><%= head.timeline %></span>
-
-        </div>
-        </div>
-       <% }) %>
-
-
-
-    </div>
 
 
 
@@ -135,151 +43,25 @@
 
 
 
-<!--categories-->
-<div class="m-5">
-    <h2 class="d-flex justify-content-center">دسته بندی مطالب</h2>
-</div>
 
-<div class="row">
-
-    <% categories.forEach(category => { %>
-
-    <div class="col-12 col-md-3 mb-3 badge-dark p-4 ">
-    <div class="card text-white   p-3 col-12 " style="background: #009688">
-            <div class="card-body d-flex justify-content-center">
-                <a class="text-white font-weight-bold text-decoration-none " href="/post?category=<%= category.slug %>"><h4><%= category.name %></h4></a>
-            </div>
-        <!--<% if(category.childs) { %>-->
-        <!--<ul class="p-1">-->
-            <!--<% category.childs.forEach(cate => { %>-->
-            <!--<li>-->
-                <!--<a class="text-white " href="/post?category=<%= cate.slug %>"><%= cate.name %></a>-->
-            <!--</li>-->
-            <!--<% }) %>-->
-        <!--</ul>-->
-        <!--<% } %>-->
-    </div>
-    </div>
-    <% }) %>
-</div>
-<!--end of categories-->
-
-
-
-<%/*%> search <%*/%>
-                          <section class="search-sec mb-5 " >
-                              <div class="container">
-                                  <form action="/post" method="get" novalidate="novalidate">
-                                      <div class="row">
-                                          <div class="col-lg-12">
-                                              <div class="row">
-                                                  <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                                                      <button type="submit" class="btn wrn-btn btn-outline-dark">جست و جو</button>
-                                                  </div>
-                                                  <!--<div class="col-lg-3 col-md-3 col-sm-12 p-0">-->
-                                                  <!--<select class="form-control search-slt" id="exampleFormControlSelect1">-->
-                                                  <!--<option>Select Pickup City</option>-->
-                                                  <!--<option>Example one</option>-->
-                                                  <!--<option>Example one</option>-->
-                                                  <!--<option>Example one</option>-->
-                                                  <!--<option>Example one</option>-->
-                                                  <!--<option>Example one</option>-->
-                                                  <!--<option>Example one</option>-->
-                                                  <!--</select>-->
-                                                  <!--</div>-->
-
-
-
-                                                  <div class="col-lg-6 col-md-3 col-sm-12 p-0">
-                                                      <input type="text" class="form-control search-slt" name="search" placeholder="کلمه یا متن دلخواهتان را جست و جو کنید ">
-                                                  </div>
-                                                  <div class="form-group col-md-3">
-                                                      <select name="category" class="form-control search-slt">
-                                                          <option value="all">همه دسته ها</option>
-                                                          <% categories.forEach(cate => { %>
-                                                          <option value="<%= cate.slug %>" <%= cate.slug === category ? 'selected' : '' %> ><%= cate.name %></option>
-                                                          <% }) %>
-                                                      </select>
-                                                  </div>
-
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </form>
-                              </div>
-                          </section>
-
-     <%/*%>End search <%*/%>
-<div class="row ">
-    <div class="  ">
-        <div class=" p-2 bg-dark text-white  m-3">
-            <h4 >آخرین خواندنی ها</h4>
-        </div>
-
-    </div>
-
-    <div class="">
-        <div class=" m-3  ">
-
-            <a class=" btn-danger btn   p-3  font-weight-bold "  href="/posts" > پست های بیشتر →</a>
-        </div>
-
-    </div>
-
-</div>
-
-
-
-
-<div class="row ">
-    <% courses.forEach(course => { %>
-      <div class="col-12 col-md-3  mb-4 ">
-          <div class="card shadow heightCart ">
-              <a href="<%= course.path() %>">
-
-                         <img class="card-img-top cardHeight" src="<%= course.thumb %>" alt="<%= course.title %>">
-                     </a>
-
-              <div class="card-body ">
-                <h6 class=" p-1"><a class="text-dark text-decoration-none" href="<%= course.path() %>"><%= course.title %></a></h6>
-                  <p class=" card-text"><%- course.sum.substr(0,130)%>...</p>
-                     <%/*%> <a href="<%= course.path() %>" class="btn btn-info btn-sm cen">اطلاعات بیشتر</a> <%*/%>
-
-
-              </div>
-              <div class="card-footer text-muted alert-secondary sidebar-heading">
-                  <span class="badge-danger p-1" style="background: #009688"> <%= date(course.createdAt).format('jD jMMMM jYYYY') %></span> - <span class="badge-secondary p-1"><%= course.timeline %></span>
-
-              </div>
-          </div>
-      </div>
-    <% }) %>
-
-</div>
-     <div class="row mt-5 ">
-         <div class="col-12 col-md-12 d-flex justify-content-center ">
-             <a class=" btn-outline-secondary btn  p-3  font-weight-bold"  href="/posts"> پست های بیشتر →</a>
-         </div>
-     </div>
 
 
 
 <!-- particles.js container --> <div >
-    <div class="p-3 mt-5 " style="background: linear-gradient(90deg, #003a59 0%, #7f1517 100%)"
+    <div class="p-3 mt-5 " style="  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);   "
     >
         <div class="  ">
             <h2 class="d-flex justify-content-center text-white">
-                <span class="badge-danger p-2" >BitSpider.ir</span>
+                <span class="badge-danger p-2" >بمب خنده</span>
             </h2>
             <h1 class="  text-white mb-3 d-flex  justify-content-center">
-                به زودی
-            </h1>
-            <h6 class="  text-white mb-3 d-flex  justify-content-center" >از والت استفاده کنید , ارز دیجیتال چنج کنید</h6>
-            <h6 class="  text-white mb-3 d-flex  justify-content-center" >سفارش های خرید یا فروشتان را ثبت کنید</h6>
+حالا دانلود کنید            </h1>
+            <!--<h6 class="  text-white mb-3 d-flex  justify-content-center" >از والت استفاده کنید , ارز دیجیتال چنج کنید</h6>-->
+            <!--<h6 class="  text-white mb-3 d-flex  justify-content-center" >سفارش های خرید یا فروشتان را ثبت کنید</h6>-->
             <div class="d-flex justify-content-center">
 
                 <div class="col-12 col-md-12 d-flex justify-content-center ">
-                    <a class=" btn-danger btn  p-3  font-weight-bold" href="/" style="background: #"> معرفی وبسایت →</a>
+                    <a class=" btn-danger btn  p-3  font-weight-bold" href="/" style="background: "> دانلود اپلیکیشن →</a>
                 </div>
             </div>
 
@@ -289,10 +71,7 @@
 
 
 
-<script>
-    /* ---- particles.js config ---- */
-    particlesJS("particles-js", {"particles":{"number":{"value":159,"density":{"enable":true,"value_area":801.7060304327614}},"color":{"value":"#ffffff"},"shape":{"type":"edge","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":8},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.25654592973848367,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":0,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":128.27296486924183,"color":"#ffffff","opacity":0.3286994724774322,"width":1.122388442605866},"move":{"enable":true,"speed":3.206824121731046,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"bubble"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
-</script>
+<script>particlesJS("particles-js", {"particles":{"number":{"value":160,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;</script>
 
 
 

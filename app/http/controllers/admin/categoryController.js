@@ -8,14 +8,14 @@ class categoryController extends controller {
     async index(req , res) {
         try {
             let page = req.query.page || 1;
-            let categories = await Category.paginate({} , { page , sort : { createdAt : -1 } , limit : 20 , populate : 'parent'});
+            let categories = await Category.paginate({} , { page , sort : { createdAt : -1 } , limit : 5 , populate : 'parent'});
             res.render('admin/categories/index',  { title : 'دسته ها' , categories });
         } catch (err) {
             next(err);
         }
     }
 
-  async  create(req , res) {
+  async create(req , res) {
         let categories = await Category.find({ parent : null });
         res.render('admin/categories/create' , { categories });
     }

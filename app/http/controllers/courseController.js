@@ -57,7 +57,7 @@ class courseController extends controller {
             let page = req.query.page || 1;
             let courses = await Course.paginate({} , { page , sort : { createdAt : -1 } , limit : 12 });
             let categories = await Category.find({ parent : null }).populate('childs').exec();
-            res.render('home/posts',  { title : 'مقاله ها' , courses , categories });
+            res.render('home/posts',  { title : 'پست ها' , courses , categories });
         } catch (err) {
             next(err);
         }

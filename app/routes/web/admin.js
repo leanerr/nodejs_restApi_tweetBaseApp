@@ -5,10 +5,12 @@ const router = express.Router();
 const adminController = require('app/http/controllers/admin/adminController');
 const courseController = require('app/http/controllers/admin/courseController');
 const categoryController = require('app/http/controllers/admin/categoryController');
+const tabliqController = require('app/http/controllers/admin/tabliqController');
 
 // validators 
 const courseValidator = require('app/http/validators/courseValidator');
 const categoryValidator = require('app/http/validators/categoryValidator');
+const tabliqValidator = require('app/http/validators/tabliqValidator');
 
 // Helpers
 const upload = require('app/helpers/uploadImage');
@@ -39,6 +41,28 @@ router.put('/courses/:id' ,
     courseController.update
 );
 router.delete('/courses/:id' , courseController.destroy);
+
+
+
+// tabliq Routes
+router.get('/tabliq' , tabliqController.index);
+router.get('/tabliq/create' , tabliqController.create);
+router.post('/tabliq/create' ,
+    upload.single('images') ,
+    tabliqValidator.handle() ,
+    convertFileToField.handle ,
+    tabliqController.store
+);
+router.get('/tabliq/:id/edit' ,tabliqController.edit);
+router.put('/tabliq/:id' ,
+    upload.single('images') ,
+    tabliqValidator.handle() ,
+    convertFileToField.handle ,
+    tabliqController.update
+);
+router.delete('/tabliq/:id' , tabliqController.destroy);
+
+
 
 router.post('/upload-image' ,upload.single('upload') ,adminController.uploadImage);
 
