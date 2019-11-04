@@ -23,7 +23,7 @@ build-master:
 build-tags:
   stage: build
   script:
-    - docker build -t "$YB_REGISTRY_REPO:$CI_COMMIT_TAG" . -f debug.Dockerfile
+    - docker build -t "$YB_REGISTRY_REPO:$CI_COMMIT_TAG" . -f Dockerfile
     - docker push "$YB_REGISTRY_REPO:$CI_COMMIT_TAG"
 
   only:
