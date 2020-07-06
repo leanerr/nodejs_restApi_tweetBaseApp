@@ -1,1 +1,1 @@
-Follow app => http => contreollers => api 
+Follow app => http => controllers => api 
