@@ -40,7 +40,7 @@
     "sitemap": "^3.2.2",
     "striptags": "^3.1.1",
     "unique-string": "^1.0.0",
-    "validator": "^11.1.0",
+    "validator": "^13.7.0",
     "vcap_services": "^0.7.1"
   },
   "devDependencies": {
