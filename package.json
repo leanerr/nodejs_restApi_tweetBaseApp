@@ -36,7 +36,7 @@
     "passport-google-oauth": "^1.0.0",
     "passport-local": "^1.0.0",
     "rss": "^1.2.2",
-    "sharp": "^0.22.1",
+    "sharp": "^0.30.5",
     "sitemap": "^3.2.2",
     "striptags": "^3.1.1",
     "unique-string": "^1.0.0",
